@@ -4,7 +4,7 @@
       v-model="title"
       type="text"
       class="text-input"
-      placeholder="Add new list"
+      placeholder="リストの追加"
       @focusin="startEditing"
       @focusout="finishEditing"
     />
@@ -15,16 +15,13 @@
 </template>
 <script>
 export default {
-  data() {
+  data: function() {
     return {
       title: "",
       isEditing: false, //フォーカス初期値
     };
   },
-
-  //監視
   computed: {
-    //------------------------
     classList() {
       const classList = ["addlist"];
       if (this.isEditing) {
@@ -35,15 +32,13 @@ export default {
       }
       return classList;
     },
-    //------0文字以上入力していたら表示---------
+    //------0文字以上入力している時---------
     titleExists() {
       return this.title.length > 0;
     },
   },
-
-  //-------メソッド-----------
   methods: {
-    addList() {
+    addList: function() {
       this.$store.dispatch("addlist", { title: this.title });
       this.title = "";
     },
