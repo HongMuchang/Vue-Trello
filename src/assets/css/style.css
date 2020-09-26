@@ -1,5 +1,5 @@
 html {
-  background: rgb(18, 189, 220);
+  background: rgb(196, 4, 235);
   font-family: "Avenir", Helvetica, Arial, "system-ui", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,11 +10,11 @@ html {
 }
 
 header {
-  background: rgb(18, 189, 220);
+  background: rgb(196, 4, 235);
   height: 70px;
   color: white;
   font-style: italic;
-  font-size: 40px;
+  font-size: 70px;
   text-align: left;
   padding: 20px;
 }
@@ -116,9 +116,10 @@ main {
 }
 
 .list-title {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   padding: 15px;
+  color: rgba(46, 30, 30, 0.707);
 }
 
 .list-counter {
@@ -180,4 +181,12 @@ main {
   background-color: #00d78f;
   pointer-events: auto;
   cursor: pointer;
+}
+.active .text-input {
+  background-color: #fff;
+}
+
+.alltask {
+  color: #ccc;
+  font-size: 30px;
 }
