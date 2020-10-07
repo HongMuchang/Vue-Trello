@@ -18,9 +18,9 @@
   </div>
 </template>
 <script>
-import draggable from "vuedraggable";
 import CardAdd from "./CardAdd";
 import Card from "./Card";
+import draggable from "vuedraggable";
 export default {
   components: {
     CardAdd,
@@ -47,7 +47,7 @@ export default {
     },
   },
   methods: {
-    removeList: function() {
+    removeList: function () {
       if (confirm("本当にこのリストを削除しますか？")) {
         this.$store.dispatch("removelist", { listIndex: this.listIndex });
       }
