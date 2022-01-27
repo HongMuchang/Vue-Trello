@@ -1,10 +1,16 @@
 <template>
   <div>
     <header>
-      Trello
+      <!-- Trello -->
+      <div class="header_images">
+        <img src='../assets/icon.png' class="icon">
+      </div>
     </header>
     <main>
-      <p class="info-line alltask">All: {{ totalCardCount }} tasks</p>
+      <div class="main_top">
+        <p class="info-line alltask">All : {{ totalCardCount }} 件</p>
+      </div>
+        <ListAdd />
       <div class="list-index">
         <draggable :list="lists" @end="movingList" class="list-index">
           <List
@@ -15,7 +21,6 @@
             :listIndex="index"
             @change="movingCard"
           />
-          <ListAdd />
         </draggable>
       </div>
     </main>

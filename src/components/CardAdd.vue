@@ -4,7 +4,7 @@
       v-model="body"
       type="text"
       class="text-input"
-      placeholder="カードの追加"
+      placeholder="追加"
       @focusin="startEditing"
       @focusout="finishEditing"
     />
